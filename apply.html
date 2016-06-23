@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            josei beat! apply
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://www.holbertonschool.com/level2/holberton.css" rel="stylesheet">
+        <link href="styles/styles.css" rel="stylesheet">
+        <script src="js/behavior.js"></script>
+        <link rel="shortcut icon" href="img/bito-san.ico" type="image/x-icon" />
+    </head>
+    
+       <body class="works_on_smartphone">
+        
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+        </script>
+        
+        <header> 
+            
+            <div class="right">
+                
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="josei_beat">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                </script>
+                
+                <div class="fb-share-button" data-href="http://173.246.107.90/apply.html" data-layout="button_count"></div>
+                
+            </div>
+            
+            <h1><a href="index.html"><img src="img/bito-san.jpg" width="102" height="114" alt="smirking Bito mascot" /> josei beat</a></h1>
+            
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="reviews.html">reviews</a></li>
+                <li><a href="forum.html">forum</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            
+        </header>
+        
+        <main>
+            <article>
+                    <p>So you want to be part of the Josei Beat team. Tell us a bit about yourself!</p>
+                    <p><strong>Note: The following form is not yet fully functional and will not submit data when you hit 'Submit.' Please keep posted for updates as we work to fully implement all the parts of the site!</strong></p>
+                <form>
+                    Name/handle: <input type="text" name="name"> <br /><br />
+                    Contact email: <input type="text" name="contact"> <br /><br />
+                    Age: <input type="text" name="age"> <br /><br />
+                    Location: <input type="text" name="location"> <br /><br />
+                    
+                   
+                    Describe a little bit about yourself and why you would like to be a part of the Josei Beat team: <br />
+                    <textarea name="review" rows="10" cols="100"></textarea>
+                    <br /><br />
+                    
+                    How many hours a week or month do you see yourself being able to commit to contributing to Josei Beat? <br />
+                    <textarea name="review" rows="10" cols="100"></textarea>
+                    <br /><br />
+                    
+                    What other commitments and hobbies do you currently have? <br />
+                    <textarea name="review" rows="10" cols="100"></textarea>
+                    <br /><br />
+                    
+                    Do you have a writing sample you would like to share with us? <br />
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    
+                    <input type="submit" value="Submit!">
+                </form>
+            </article>
+            
+            <aside>
+               
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                    /*this.page.url = http://173.246.107.90/apply.html;*/
+                    this.page.identifier = '/apply'; 
+                };
+
+                    (function() {
+                        var d = document, s = d.createElement('script');
+        
+                        s.src = '//joseibeat.disqus.com/embed.js'; 
+        
+                        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+                </noscript>
+                
+            </aside>
+            
+        </main>
+        
+        <footer>
+        Made by <a href="https://twitter.com/electra_chong" target="_blank">Electra Chong</a> for <a href="https://www.holbertonschool.com" target="_blank">Holberton School</a>
+        </footer>  
+    
+    </body>
+    
+</html>

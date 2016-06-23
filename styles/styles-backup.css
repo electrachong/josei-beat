@@ -1,0 +1,298 @@
+/*Notes to self: consider adding character padding to header, centering text in page and by Bito-logo (has to do w/ inline and floats)*/
+/*Study how to do the flexbox layout by myself, so I could explain it if needed.
+Consider making a flex container for blog posts within article?*/
+/*Check if main actually needs padding, could use top 0?*/
+/*My code behaves like this, but do I have overflow auto settings to the container for header and footer so if the size of the screen is decreased, it decreases too (instead of creating a scrollbar? Is that what overflow is for, by the way?*/
+/*Think about changing colors! of aside and footer for example*/
+/*Currently needs more padding or margin below header, but can fiddle with that later; slash will probably attempt to float by the image anyway*/
+/*Fuss about article padding, spacing b/t main and header*/
+/* Review: inline objects mean it cannot have margins? Reference: jelly */
+/* Change thumbnail to click to expand kind of thing? */
+/* Look into loading times for javascript -- script executes before content is loaded; ask Holberton school? */
+
+
+/* Importing webfonts */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* CSS reset rules */
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Fonts and colors */
+
+body {
+	font-family: 'Josefin Sans', serif;
+	color: rgba(0, 0, 0, 0.8);
+}
+    
+h1, h2, h3, h4, h5, h6, header {
+	font-family: 'Montserrat';
+}
+    
+header a {
+    color: rgba(233, 60, 87, 1);
+}
+
+header a:hover {
+   	color: rgba(0, 0, 0, 0.65); 
+}
+
+article {
+}
+
+header {
+	border-bottom: 1px solid rgb(221,221,221);
+	transition: border-bottom-color 1s ease;
+    background-color: white;
+}
+
+header ul a {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+header ul a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+aside {
+	background: #FAFAFA;
+}
+
+aside p {
+	border: 1px solid #bbb;
+	background: #ddd;
+	color: black;
+}
+
+footer a {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+    border-top: 1px solid rgb(221,221,221);
+    background-color: white;
+	transition: border-bottom-color 1s ease;
+}
+
+a {
+	color: #F80002;
+}
+
+
+/* Positioning and margins */
+
+@media (min-width: 1100px) {
+	body {
+		width: 1100px;
+		margin: 0 auto;
+	}
+}
+
+main {
+    padding-top: 235px;
+}
+
+#smart_thumbnail {
+    display: block;
+    margin: auto;
+}
+
+article {
+	padding: 20px 15px;
+}
+article > *:first-child {
+	margin-top: 0;
+}
+aside {
+	padding: 50px 15px;
+}
+
+header .left {             /*what does this do? should I do something for header right?*/
+	float: left;
+	margin: 0 10px 15px;
+}
+
+/* Header */
+header {
+    position: fixed;
+	height: 150px;
+    width: 1120px;
+    padding: 35px 0px;
+    margin: 0 auto;
+}
+header ul {
+	list-style: none;
+	margin: 10px 0px;
+	padding: 0;
+}
+header li {
+	display: inline;
+	vertical-align:middle;
+}
+header li:first-child {
+	margin-left: 97px;         /*can adjust to be less if want to add list items*/
+}
+header li a {
+	margin: 0 20px;
+}
+header li.logo {
+	font-size: 36px;
+}
+header a {
+	text-decoration: none;
+}
+header .fb-share-button, .twitter-share-button {
+    display: block;
+    margin: 8px 0px;
+}
+
+/* Aside */
+
+aside p {
+	border-radius: 10px;
+	padding: 20px 20px;
+}
+
+
+/* Footer */
+
+footer {
+    position: fixed;
+	padding: 5px 20px;
+    width: 100%;
+    height: auto;               /*Otherwise header will attempt to fill up extra space*/
+    margin: 0 auto;
+    bottom: 0%;
+    left: 0%;
+}
+
+
+/* Text styles and margins */
+
+p {
+	margin-bottom: 15px;
+}
+header {
+    font-weight: bold; 
+}
+
+h1 {
+	font-size: 72px;
+	margin: 15px 0px; 
+}
+
+h2 {
+	font-size: 32px;
+	margin: 30px 0 15px;
+}
+h3 {
+	font-size: 28px;
+	margin: 25px 0 10px;
+}
+h4 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px 0 10px;
+}
+h5 {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 15px 0 10px;
+}
+h6 {
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+@media (max-width: 800px) {
+  body.works_on_smartphone {
+  	display: block;
+  }
+  body.works_on_smartphone main {
+  	display: block;
+  }
+  header .right {
+  	float: none;
+  }
+}
+
+/* image JS challenge */
+
+img {
+	max-width: 100%;
+}
+
+img.small {
+	width: 100px;
+}
+
+/* Flexbox properties */
+
+body, main {
+    display: flex;
+}
+
+body {
+    flex-direction: column;
+}
+
+main {
+    flex-direction: row;
+    flex: auto;
+}
+
+article, aside {
+    overflow-y: auto
+}
+
+article {
+    flex: 2;
+}
+
+aside {
+    flex: 1;
+}

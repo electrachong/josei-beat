@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            josei beat! index
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://www.holbertonschool.com/level2/holberton.css" rel="stylesheet">
+        <link href="styles/styles.css" rel="stylesheet">
+        <script src="js/behavior.js"></script>
+        <link rel="shortcut icon" href="img/bito-san.ico" type="image/x-icon" />
+    </head>
+    
+    <body class="works_on_smartphone">
+        
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+        </script>
+        
+        <header> 
+            
+            <div class="right">
+                
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="josei_beat">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                </script>
+                              
+                <div class="fb-share-button" data-href="http://173.246.107.90/index.html" data-layout="button_count"></div>
+                
+            </div>
+            <h1><a href="index.html"><img src="img/bito-san.jpg" width="102" height="114" alt="smirking Bito mascot" /> josei beat </a></h1>
+            
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="reviews.html">reviews</a></li>
+                <li><a href="forum.html">forum</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            
+        </header>
+      
+        <main>
+            
+            <article>
+                
+                <div id="intro_image">
+                <img class="small" id="smart_thumbnail" src="img/momoko2.png" alt="image of Momoko from 3 AM Dangerous Zone saying: irasshaimase! (welcome.)"/>
+                <p id="caption_text">Click to expand.</p>    
+                </div>
+                
+                <p id="intro_text"><strong>Introduction:</strong> Josei Beat's name is inspired by, but independent of, the Viz media former publication <em>Shojo Beat</em> published from 2005-2009. <em>Josei</em> is a blossoming genre of manga (and anime) tailored towards young and adult women. As the popularity of manga grows world-wide, so too does the portion of female readership. The <em>shojo</em> genre (aimed at young girls and teenagers), in particular, has received increasing attention and constitutes a considerable portion of manga consumed by current-day non-Japanese readers of Japanese media. We believe <em>josei</em> manga also deserves an English-speaking outlet dedicated to shining a spotlight on its works and fostering a tight community of josei fans.</p>
+                <p>Check out our <a href="/tweets.html">tweets</a> here!</p>
+                
+                <h3>blog posts</h3>
+                
+                <?php include './blog-posts.php';?>
+                
+            </article>
+            
+            <aside>
+               
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                    /*this.page.url = http://173.246.107.90/index.php;*/
+                    this.page.identifier = '/index'; 
+                };
+
+                    (function() {
+                        var d = document, s = d.createElement('script');
+        
+                        s.src = '//joseibeat.disqus.com/embed.js'; 
+        
+                        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+                </noscript>
+                
+            </aside>
+            
+        </main>
+        
+        <footer>
+            Made by <a href="https://twitter.com/electra_chong" target="_blank">Electra Chong</a> for <a href="https://www.holbertonschool.com" target="_blank">Holberton School</a>
+        </footer>
+      
+        <script id="dsq-count-scr" src="//joseibeat.disqus.com/count.js" async></script>
+    </body>
+</html>
